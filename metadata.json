@@ -1,0 +1,10 @@
+{
+  "name": "FitMuse AI",
+  "description": "A luxury full-stack AI-powered virtual try-on and personalized fashion companion using the Gemini API.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User specific custom settings, styling preferences, and fashion coordinates",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the user"
+        },
+        "email": {
+          "type": "string",
+          "description": "Primary email address of the authenticated user"
+        },
+        "avatarUrl": {
+          "type": "string",
+          "description": "User profile picture or uploaded selfie URL"
+        },
+        "styleProfile": {
+          "type": "object",
+          "description": "Personal highly-aligned body proportions, color drapes and recommendations"
+        },
+        "orderHistory": {
+          "type": "array",
+          "description": "List of historically processed orders inside the boutique"
+        }
+      },
+      "required": ["name", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores user-specific metadata and preferred stylistic profiles securely."
+    }
+  }
+}
